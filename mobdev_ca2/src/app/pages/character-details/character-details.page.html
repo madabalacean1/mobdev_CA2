@@ -1,13 +1,16 @@
-</ion-content>
 <ion-header>
- <ion-toolbar color="primary">
+  <ion-toolbar color="primary">
       <ion-buttons slot="start">
       <ion-back-button defaulthref="/tabs/characters"></ion-back-button>
     </ion-buttons>
-    <ion-title>character-details</ion-title>
+    <ion-title>{{ character?.name }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
-
+    <ion-card>
+        <ion-card-content>
+        Season: {{ character.season }}
+        </ion-card-content>
+    </ion-card>
 </ion-content>
