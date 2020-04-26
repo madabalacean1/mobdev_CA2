@@ -7,7 +7,9 @@
   top: 50%;
   transform: translateY(-50%);
 }
-
+#fancy-button {
+  background: var(--charcoal, #16689e);
+}
 #container strong {
   font-size: 20px;
   line-height: 26px;
@@ -17,7 +19,7 @@
   font-size: 16px;
   line-height: 22px;
 
-  color: #8c8c8c;
+  color: #d41a1a;
 
   margin: 0;
 }

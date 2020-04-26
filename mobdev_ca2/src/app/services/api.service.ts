@@ -1,11 +1,30 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+
+//import { map } from `rxjs/operators`;
+
+
 @Injectable({
     providedIn: 'root'
 })
-export class ApiService {
-    [x: string]: any;
+
+// export class ApiService {
+ //  baseUrl = `https://www.breakingbadapi.com/api/`;
+   // imageUrl = `https://vignette.wikia.nocookie.net/breakingbad/images/1/16/Saul_Goodman.jpg/revision/latest?cb=20120704065846%22/`;
+
+
+// }
+
     constructor(private http: HttpClient) { }
+
+// getEpisode (offset = 0) {
+
+  //  return this http.get (`$this.baseUrl`)/episode?offset=${offset}&infinit=25`).pipe(map(result => {return result [`results`];
+//})
+
+
+
+
 
       //getEpisodes() {
       // return this.http.get(`https://www.breakingbadapi.com/api/episodes`)
