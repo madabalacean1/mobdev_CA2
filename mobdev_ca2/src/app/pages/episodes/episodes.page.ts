@@ -26,3 +26,5 @@ export class EpisodesPage implements OnInit {
         this.router.navigateByUrl(`/tabs/episodes/${episodeId}`);
     }
 }
+
+// --code from week 9 class recording

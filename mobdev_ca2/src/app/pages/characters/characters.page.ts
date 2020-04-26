@@ -1,3 +1,6 @@
+// main logic for 'characters'
+// Code from class recording 23/4 
+
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';

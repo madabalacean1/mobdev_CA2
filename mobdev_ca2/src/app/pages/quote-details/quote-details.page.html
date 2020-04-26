@@ -1,14 +1,15 @@
+<!--general page markup from class recording 23/4-->
 <ion-header>
   <ion-toolbar color="primary">
     <ion-buttons slot="start" defaultHref="/tabs/quotes">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>{{ quote?.series }}</ion-title>
+    <ion-title>{{ quote?.quote }}</ion-title>
     <ion-buttons slot="end">
-      <ion-button (click)="unfavoritequote()" *ngIf="isFavorite">
+      <ion-button (click)="unfavoriteepisode()" *ngIf="isFavorite">
         <ion-icon name="star" slot="icon-only" color="secondary"></ion-icon>
       </ion-button>
-      <ion-button (click)="favoritequote()" *ngIf="!isFavorite">
+      <ion-button (click)="favoriteepisode()" *ngIf="!isFavorite">
         <ion-icon name="star-outline" slot="icon-only" color="secondary"></ion-icon>
       </ion-button>
     </ion-buttons>
@@ -16,17 +17,18 @@
 </ion-header>
 <ion-content padding>
   <ion-card *ngIf="quote" class="movie-card">
-    <ion-card-header>Quote {{ quote.season }}: {{ quote.quote }}</ion-card-header>
+    <ion-card-header>Author: {{ quote.author }}</ion-card-header>
     <ion-card-content>
-      {{ quote.season }}
+      <!--{{ episode.season }}-->
+      @TODO Some random text
     </ion-card-content>
     <ion-item class="movie-info" lines="none">
       <ion-icon name="quote" slot="start"></ion-icon>
-      Director: {{ quote.season }}
+      Series: {{ quote.series }}
     </ion-item>
     <ion-item class="movie-info" lines="none">
-      <ion-icon name="calendar" slot="start"></ion-icon>
-      Release Date: {{ quote.air_date }}
-    </ion-item>
+      <ion-icon name="quote" slot="start"></ion-icon>
+      Quote: {{ quote.quote }}
+    </ion-item>    
   </ion-card>
 </ion-content>
