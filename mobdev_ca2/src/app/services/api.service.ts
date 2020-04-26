@@ -12,7 +12,7 @@ export class ApiService {
 // }
 
      getEpisodes() {
-      return this.http.get(`https://8100-f0a6a1d7-fe17-49fd-8b7d-e9af6b734b31.ws-eu01.gitpod.io/assets/episodes.json`)
+      return this.http.get(`https://8100-b0265e1a-b789-4eca-8152-3d2eceaa80c3.ws-eu01.gitpod.io/assets/episodes.json`)
    }
 
    //getEpisode(id) {
@@ -20,33 +20,41 @@ export class ApiService {
    // }
 
    getEpisode() {
-    return this.http.get(`https://8100-f0a6a1d7-fe17-49fd-8b7d-e9af6b734b31.ws-eu01.gitpod.io/assets/episode.json`)
+    return this.http.get(`https://8100-b0265e1a-b789-4eca-8152-3d2eceaa80c3.ws-eu01.gitpod.io/assets/episode.json`)
     }
    // getCharacters() {
        // return this.http.get(`https://www.breakingbadapi.com/api/characters`)
     //}
 
    getCharacters() {
-   return this.http.get(`https://8100-f0a6a1d7-fe17-49fd-8b7d-e9af6b734b31.ws-eu01.gitpod.io/assets/characters.json`)
+   return this.http.get(`https://8100-b0265e1a-b789-4eca-8152-3d2eceaa80c3.ws-eu01.gitpod.io/assets/characters.json`)
    }
    //getCharacter(id) {
     //return this.http.get(`https://breakingbadapi.com/api/characters/${id}`)
   // }
     getCharacter() {
-      return this.http.get(`https://8100-f0a6a1d7-fe17-49fd-8b7d-e9af6b734b31.ws-eu01.gitpod.io/assets/character.json`)
+      return this.http.get(`https://8100-b0265e1a-b789-4eca-8152-3d2eceaa80c3.ws-eu01.gitpod.io/assets/character.json`)
     }
     //getQuotes() {
       // return this.http.get(`https://www.breakingbadapi.com/api/quotes`)
       // }
 
      getQuotes() {
-     return this.http.get(`https://8100-f0a6a1d7-fe17-49fd-8b7d-e9af6b734b31.ws-eu01.gitpod.io/assets/quotes.json`)
+     return this.http.get(`https://8100-b0265e1a-b789-4eca-8152-3d2eceaa80c3.ws-eu01.gitpod.io/assets/quotes.json`)
     }
     getQuote() {
-      return this.http.get(`https://8100-f0a6a1d7-fe17-49fd-8b7d-e9af6b734b31.ws-eu01.gitpod.io/assets/quote.json`)
+      return this.http.get(`https://8100-b0265e1a-b789-4eca-8152-3d2eceaa80c3.ws-eu01.gitpod.io/assets/quote.json`)
    }
+
+  getDeaths() {
+      return this.http.get(`https://8100-b0265e1a-b789-4eca-8152-3d2eceaa80c3.ws-eu01.gitpod.io/assets/deaths.json`)
+  }
+  getDeath(name) {
+      return this.http.get(`https://breakingbadapi.com/api/death-count?name=Gustavo+Fring`)
+  }
+
+}
 
       //getQuote(id) {
        // return this.http.get(`https://breakingbadapi.com/api/quotes/${id}`)
     //}
-}

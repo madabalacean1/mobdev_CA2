@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { ApiService } from '../../services/api.service';
+import { DeathsPage } from './deaths.page';
 
 @Component({
     selector: 'app-deaths',
@@ -12,7 +13,7 @@ import { ApiService } from '../../services/api.service';
 })
 export class DeathsPage implements OnInit {
 
-    quotes: Observable<any>;
+         deaths: Observable<any>;
 
     constructor(private router: Router, private api: ApiService) { }
 
