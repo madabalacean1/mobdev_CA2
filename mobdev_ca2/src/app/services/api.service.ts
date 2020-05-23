@@ -1,79 +1,73 @@
+// Initial code from class recording 14/4
+// 25/4 - Added getters for characters, quotes and deaths
+// API doc @ https://breakingbadapi.com/Documentation
+
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
-//import { map } from `rxjs/operators`;
-
-
 @Injectable({
-    providedIn: 'root'
+  providedIn: 'root'
 })
+export class ApiService {
+  constructor(private http: HttpClient) { }
 
-// export class ApiService {
- //  baseUrl = `https://www.breakingbadapi.com/api/`;
-   // imageUrl = `https://vignette.wikia.nocookie.net/breakingbad/images/1/16/Saul_Goodman.jpg/revision/latest?cb=20120704065846%22/`;
+  // GETTERS
+  getEpisodes() {
+      return this.http.get(`https://www.breakingbadapi.com/api/episodes`)
+  }
+
+//  getEpisodes() {
+ //     return this.http.get(`https://8100-f692b599-1a29-4a6b-b306-e8829afac297.ws-eu01.gitpod.io/assets/episodes.json`)
+ //   }
+
+  getEpisode(id) {
+      return this.http.get(`https://breakingbadapi.com/api/episodes/${id}`)
+  }
+// getEpisode() {
+  //  return this.http.get(`https://8100-f692b599-1a29-4a6b-b306-e8829afac297.ws-eu01.gitpod.io/assets/episode.json`)
+  //   }
 
 
-// }
+  getCharacters() {
+      return this.http.get(`https://www.breakingbadapi.com/api/characters/`)
+  }
 
-    constructor(private http: HttpClient) { }
+ //  getCharacters() {
+ //  return this.http.get(`https://8100-f692b599-1a29-4a6b-b306-e8829afac297.ws-eu01.gitpod.io/assets/characters.json`)
+ //  }
 
-// getEpisode (offset = 0) {
+  getCharacter(id) {
+      return this.http.get(`https://breakingbadapi.com/api/characters/${id}`)
+  }
+/// getCharacter() {
+  ///    return this.http.get(`https://8100-f692b599-1a29-4a6b-b306-e8829afac297.ws-eu01.gitpod.io/assets/character.json`)
+//    }
 
-  //  return this http.get (`$this.baseUrl`)/episode?offset=${offset}&infinit=25`).pipe(map(result => {return result [`results`];
-//})
+  getQuotes() {
+      return this.http.get(`https://www.breakingbadapi.com/api/quotes`)
+  }
 
+// getQuotes() {
+ //    return this.http.get(`https://8100-f692b599-1a29-4a6b-b306-e8829afac297.ws-eu01.gitpod.io/assets/quotes.json`)
+  //  }
 
+  getQuote(id) {
+      return this.http.get(`https://breakingbadapi.com/api/quotes/${id}`)
+  }
 
-
-
-      //getEpisodes() {
-      // return this.http.get(`https://www.breakingbadapi.com/api/episodes`)
-// }
-
-     getEpisodes() {
-      return this.http.get(`https://8100-b0265e1a-b789-4eca-8152-3d2eceaa80c3.ws-eu01.gitpod.io/assets/episodes.json`)
-   }
-
-   //getEpisode(id) {
-   // return this.http.get(`https://breakingbadapi.com/api/episodes/${id}`)
-   // }
-
-   getEpisode() {
-    return this.http.get(`https://8100-b0265e1a-b789-4eca-8152-3d2eceaa80c3.ws-eu01.gitpod.io/assets/episode.json`)
-    }
-   // getCharacters() {
-       // return this.http.get(`https://www.breakingbadapi.com/api/characters`)
-    //}
-
-   getCharacters() {
-   return this.http.get(`https://8100-b0265e1a-b789-4eca-8152-3d2eceaa80c3.ws-eu01.gitpod.io/assets/characters.json`)
-   }
-   //getCharacter(id) {
-    //return this.http.get(`https://breakingbadapi.com/api/characters/${id}`)
-  // }
-    getCharacter() {
-      return this.http.get(`https://8100-b0265e1a-b789-4eca-8152-3d2eceaa80c3.ws-eu01.gitpod.io/assets/character.json`)
-    }
-    //getQuotes() {
-      // return this.http.get(`https://www.breakingbadapi.com/api/quotes`)
-      // }
-
-     getQuotes() {
-     return this.http.get(`https://8100-b0265e1a-b789-4eca-8152-3d2eceaa80c3.ws-eu01.gitpod.io/assets/quotes.json`)
-    }
-    getQuote() {
-      return this.http.get(`https://8100-b0265e1a-b789-4eca-8152-3d2eceaa80c3.ws-eu01.gitpod.io/assets/quote.json`)
-   }
+  // getQuote() {
+  //    return this.http.get(`https://8100-f692b599-1a29-4a6b-b306-e8829afac297.ws-eu01.gitpod.io/assets/quote.json`)
+ //   }
 
   getDeaths() {
-      return this.http.get(`https://8100-b0265e1a-b789-4eca-8152-3d2eceaa80c3.ws-eu01.gitpod.io/assets/deaths.json`)
+      return this.http.get(`https://www.breakingbadapi.com/api/deaths`)
+
+//  getDeaths() {
+ //     return this.http.get(`https://8100-f692b599-1a29-4a6b-b306-e8829afac297.ws-eu01.gitpod.io/assets/deaths.json`)
+ // }
+
   }
   getDeath(name) {
-      return this.http.get(`https://breakingbadapi.com/api/death-count?name=Gustavo+Fring`)
+      return this.http.get(`https://breakingbadapi.com/api//death-count?name=Gustavo+Fring`)
   }
 
 }
-
-      //getQuote(id) {
-       // return this.http.get(`https://breakingbadapi.com/api/quotes/${id}`)
-    //}
